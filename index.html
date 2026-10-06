@@ -77,6 +77,13 @@ section{padding:5.5rem 2rem}
 .lesson-info p{color:rgba(255,255,255,.45);font-size:.87rem;line-height:1.55}
 .lesson-card.stage{border-color:rgba(245,158,11,.25);grid-column:span 2}
 .lesson-card.stage .lesson-num{color:var(--amber);background:rgba(245,158,11,.15)}
+.lesson-card.done{border-color:rgba(59,130,246,.3)}
+.lesson-card.done .lesson-num{background:rgba(59,130,246,.28)}
+.lesson-date{display:block;color:var(--blue-l);font-size:.78rem;font-weight:700;letter-spacing:.06em;margin-bottom:.25rem}
+.lesson-card.stage .lesson-date{color:var(--amber)}
+.lesson-card.next{border-style:dashed;border-color:rgba(245,158,11,.45);grid-column:span 2}
+.lesson-card.next .lesson-num{color:var(--dark);background:var(--amber)}
+.lesson-card.next .lesson-date{color:var(--amber)}
 .prog-footer{margin-top:2.5rem;padding:1.5rem 1.8rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap}
 .prog-item{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.6);font-size:.9rem}
 .prog-item strong{color:#fff}
@@ -109,7 +116,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding
 @media(max-width:768px){
   .about-grid,.values-grid,.lessons-grid,.incl-box{grid-template-columns:1fr}
   .nav-links{display:none}
-  .lesson-card.stage{grid-column:span 1}
+  .lesson-card.stage,.lesson-card.next{grid-column:span 1}
   .hero-stats{gap:1.8rem}
   .prog-footer{gap:1.2rem}
   section{padding:4rem 1.2rem}
@@ -139,9 +146,9 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding
       <a href="#progetto" class="btn-outline">Il Progetto</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">6<span></span></div><div class="stat-label">Incontri</div></div>
-      <div class="stat"><div class="stat-num">12<span>h</span></div><div class="stat-label">di Formazione</div></div>
-      <div class="stat"><div class="stat-num">+<span></span></div><div class="stat-label">Stage Pratico</div></div>
+      <div class="stat"><div class="stat-num">6<span></span></div><div class="stat-label">Lezioni svolte</div></div>
+      <div class="stat"><div class="stat-num">1<span></span></div><div class="stat-label">Stage svolto</div></div>
+      <div class="stat"><div class="stat-num">8<span> ott</span></div><div class="stat-label">Prossimo incontro</div></div>
     </div>
   </div>
 </section>
@@ -197,62 +204,77 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding
 <section class="program" id="programma">
   <div class="container">
     <p class="section-label">Il Programma</p>
-    <h2 class="section-title">Sei incontri. Dodici ore.<br>Un percorso.</h2>
-    <p class="section-desc">I contenuti spaziano dalla sociologia delle organizzazioni politiche alla psicologia delle masse, dalla storia della comunicazione politica ai meccanismi del consenso, fino alla dimensione concreta del governo urbano locale.</p>
+    <h2 class="section-title">Un percorso aperto.<br>Incontro dopo incontro.</h2>
+    <p class="section-desc">Le prime sei lezioni hanno costruito gli strumenti: dalla sociologia delle organizzazioni politiche alla psicologia delle masse, dalla comunicazione in rete alla teoria dei giochi, fino al rapporto fra identità e strategia. Ora il percorso prosegue con incontri dedicati ai grandi temi della città — sicurezza, sanità e fragilità, sviluppo, commercio — in vista di una prima bozza di programma. Numero e argomenti degli incontri crescono con il lavoro del gruppo.</p>
     <div class="lessons-grid">
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 01</div>
         <div class="lesson-info">
-          <h4>Il Movimento Civico</h4>
-          <p>Sociologia delle organizzazioni politiche. Strutture, funzioni e dinamiche del potere associativo.</p>
+          <span class="lesson-date">14 gennaio 2026</span>
+          <h4>Associazioni, movimenti e partiti</h4>
+          <p>Differenze sociologiche e metodologiche fra associazioni, movimenti e partiti: dalla teoria delle élite al partito-azienda, fino ai partiti liquidi di oggi.</p>
         </div>
       </div>
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 02</div>
         <div class="lesson-info">
+          <span class="lesson-date">17 febbraio 2026</span>
           <h4>Come si fabbrica un nemico</h4>
-          <p>Propaganda e psicologia di massa. Meccanismi di costruzione del consenso e della paura nella storia.</p>
+          <p>Propaganda, psicologia di massa e marketing politico. Dal meccanismo del capro espiatorio a una comunicazione civica etica: la politica del «Noi vogliamo», non del «Loro hanno sbagliato».</p>
         </div>
       </div>
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 03</div>
         <div class="lesson-info">
-          <h4>La Comunicazione Politica</h4>
-          <p>Storia e tecniche della comunicazione politica, dal comizio di piazza ai social network.</p>
+          <span class="lesson-date">18 marzo 2026</span>
+          <h4>Mass media e social: i network fluidi</h4>
+          <p>L'uso dei mass media e dei social per creare reti fluide. Il paradosso organizzativo: una struttura solida come condizione per comunicare in modo efficace.</p>
         </div>
       </div>
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 04</div>
         <div class="lesson-info">
-          <h4>I Meccanismi del Consenso</h4>
-          <p>Come si costruisce e si mantiene il consenso democratico. Rappresentanza, fiducia e legittimità.</p>
+          <span class="lesson-date">23 aprile 2026</span>
+          <h4>La politica come scacchiera</h4>
+          <p>Decisioni interdipendenti, equilibri strategici e razionalità politica: come la teoria dei giochi aiuta a leggere il posizionamento, le coalizioni e il voto al ballottaggio.</p>
         </div>
       </div>
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 05</div>
         <div class="lesson-info">
-          <h4>Il Governo Urbano Locale</h4>
-          <p>Strumenti pratici: bilanci comunali, pianificazione urbana, istituti di partecipazione civica.</p>
+          <span class="lesson-date">28 maggio 2026</span>
+          <h4>Quando l'ideologia divora la strategia</h4>
+          <p>Dall'affinità culturale dei gruppi associativi all'azione politica: che cosa accade quando l'identità ideologica prende il sopravvento sulla strategia. Radicali negli obiettivi, riformisti negli strumenti.</p>
         </div>
       </div>
-      <div class="lesson-card">
+      <div class="lesson-card done">
         <div class="lesson-num">LEZ. 06</div>
         <div class="lesson-info">
-          <h4>Etica della Responsabilità</h4>
-          <p>Leadership civica, limiti del mandato e senso critico. Governare senza dimenticare chi si rappresenta.</p>
+          <span class="lesson-date">2 luglio 2026</span>
+          <h4>Dalla teoria al programma</h4>
+          <p>Clima, sanità e risorse della città. Si chiude la parte generale del percorso e si apre quella dedicata ai grandi temi del governo urbano.</p>
         </div>
       </div>
       <div class="lesson-card stage">
-        <div class="lesson-num">STAGE</div>
+        <div class="lesson-num">STAGE 01</div>
         <div class="lesson-info">
-          <h4>Esercitazioni Pratiche sul Campo</h4>
-          <p>Applicazione dei contenuti teorici a casi reali della città. Simulazioni, analisi di documenti pubblici, confronto con casi studio concreti.</p>
+          <span class="lesson-date">27 agosto 2026</span>
+          <h4>Sicurezza e contesto sociale</h4>
+          <p>La sicurezza come bene comune: città, cittadini, comunità. Approfondimento tematico con il dott. Pier G. Rossi.</p>
+        </div>
+      </div>
+      <div class="lesson-card next">
+        <div class="lesson-num">PROSSIMO</div>
+        <div class="lesson-info">
+          <span class="lesson-date">Giovedì 8 ottobre 2026</span>
+          <h4>Sanità, fragilità e volontariato</h4>
+          <p>Di che cosa deve occuparsi oggi un Comune? Dalla salute come bene della città alla regia municipale del welfare: dal Comune degli sportelli al Comune della prossimità.</p>
         </div>
       </div>
     </div>
     <div class="prog-footer">
-      <div class="prog-item"><span class="ico">📅</span><span><strong>6</strong> incontri di formazione frontale</span></div>
-      <div class="prog-item"><span class="ico">⏱️</span><span><strong>12 ore</strong> totali di didattica</span></div>
+      <div class="prog-item"><span class="ico">📅</span><span><strong>6 lezioni</strong> e <strong>1 stage</strong> svolti</span></div>
+      <div class="prog-item"><span class="ico">🧭</span><span>Programma <strong>aperto</strong></span></div>
       <div class="prog-item"><span class="ico">🏙️</span><span>Alessandria · <strong>2026</strong></span></div>
       <div class="prog-item"><span class="ico">👤</span><span>Dir. Didattico: <strong>Dott. Fabio Tirelli</strong></span></div>
     </div>
